@@ -9,7 +9,6 @@ import UIKit
 import Nuke
 import NukeUI
 
-
 class GifCell: UICollectionViewCell {
     let lazyImageView = LazyImageView()
 

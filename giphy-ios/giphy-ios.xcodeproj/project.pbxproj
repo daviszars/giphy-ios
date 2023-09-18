@@ -35,6 +35,11 @@
 		3E18A1792AB79B1100115110 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 3E18A1782AB79B1100115110 /* Nuke */; };
 		3E18A17B2AB79B1100115110 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3E18A17A2AB79B1100115110 /* NukeUI */; };
 		3E18A17F2AB84E2E00115110 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E18A17E2AB84E2E00115110 /* DetailsViewController.swift */; };
+		3E18A1812AB895FF00115110 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 3E18A1802AB895FF00115110 /* RxCocoa */; };
+		3E18A1832AB8963600115110 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 3E18A1822AB8963600115110 /* RxCocoa */; };
+		3E18A1852AB8963A00115110 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3E18A1842AB8963A00115110 /* RxSwift */; };
+		3E18A1872AB8964300115110 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 3E18A1862AB8964300115110 /* RxCocoa */; };
+		3E18A1892AB8964300115110 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3E18A1882AB8964300115110 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E18A1812AB895FF00115110 /* RxCocoa in Frameworks */,
 				3E18A17B2AB79B1100115110 /* NukeUI in Frameworks */,
 				3E18A1432AB22C5500115110 /* Alamofire in Frameworks */,
 				3E18A1462AB231C600115110 /* RxAlamofire in Frameworks */,
@@ -101,6 +107,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E18A1892AB8964300115110 /* RxSwift in Frameworks */,
+				3E18A1872AB8964300115110 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +116,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E18A1852AB8963A00115110 /* RxSwift in Frameworks */,
+				3E18A1832AB8963600115110 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +291,7 @@
 				3E18A1452AB231C600115110 /* RxAlamofire */,
 				3E18A1782AB79B1100115110 /* Nuke */,
 				3E18A17A2AB79B1100115110 /* NukeUI */,
+				3E18A1802AB895FF00115110 /* RxCocoa */,
 			);
 			productName = "giphy-ios";
 			productReference = 3E18A1082AB21CF400115110 /* giphy-ios.app */;
@@ -300,6 +311,10 @@
 				3E18A1202AB21CF600115110 /* PBXTargetDependency */,
 			);
 			name = "giphy-iosTests";
+			packageProductDependencies = (
+				3E18A1862AB8964300115110 /* RxCocoa */,
+				3E18A1882AB8964300115110 /* RxSwift */,
+			);
 			productName = "giphy-iosTests";
 			productReference = 3E18A11E2AB21CF600115110 /* giphy-iosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -318,6 +333,10 @@
 				3E18A12A2AB21CF600115110 /* PBXTargetDependency */,
 			);
 			name = "giphy-iosUITests";
+			packageProductDependencies = (
+				3E18A1822AB8963600115110 /* RxCocoa */,
+				3E18A1842AB8963A00115110 /* RxSwift */,
+			);
 			productName = "giphy-iosUITests";
 			productReference = 3E18A1282AB21CF600115110 /* giphy-iosUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -822,6 +841,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3E18A1772AB79B1100115110 /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeUI;
+		};
+		3E18A1802AB895FF00115110 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E18A13E2AB22BD500115110 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		3E18A1822AB8963600115110 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E18A13E2AB22BD500115110 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		3E18A1842AB8963A00115110 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E18A13E2AB22BD500115110 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		3E18A1862AB8964300115110 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E18A13E2AB22BD500115110 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		3E18A1882AB8964300115110 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E18A13E2AB22BD500115110 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

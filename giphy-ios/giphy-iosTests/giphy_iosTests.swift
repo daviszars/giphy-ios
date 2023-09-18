@@ -32,5 +32,24 @@ final class giphy_iosTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testSafeGetInt() {
+        let strInt = "10"
+        
+        let int = safeGetInt(strInt as AnyObject)
+        
+        XCTAssertEqual(int, 10)
+    }
+    
+    func testApiGetUrl() {
+        let baseUrl = "https://api.giphy.com/v1/gifs/"
+        let trendingEndpoint = "trending"
+        
+        let apiClient = HttpApiClient()
+        
+        let url = apiClient.getUrl(trendingEndpoint)
+        
+        XCTAssertEqual(url, "https://api.giphy.com/v1/gifs/trending")
+    }
 
 }

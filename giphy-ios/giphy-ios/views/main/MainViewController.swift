@@ -91,6 +91,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        // Load more items when user scrolls to the last item
         if (indexPath.row == viewModel.gifs.count - 1 ) && (indexPath.row < viewModel.maxGifCount - 1) {
             let searchQuery = try! viewModel.searchQuery.value()
             if searchQuery.isEmpty {
