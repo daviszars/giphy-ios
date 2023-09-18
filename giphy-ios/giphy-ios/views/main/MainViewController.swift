@@ -8,8 +8,7 @@
 import UIKit
 import RxSwift
 
-class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
+class MainViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var titleLabel: UILabel!
@@ -23,7 +22,6 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
 
         initCollectionView()
         initSearch()
@@ -41,7 +39,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         viewModel.searchQuery
             .throttle(RxTimeInterval.seconds(1), scheduler: MainScheduler.instance)
             .subscribe(onNext: { query in
-                self.viewModel.gifs = []
+                self.viewModel.resetGifList()
                 if query.isEmpty {
                     self.refreshTrendingGifs(scrollToTop: true)
                 } else {
@@ -72,6 +70,10 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }).disposed(by: disposables)
     }
 
+}
+
+//MARK: Collection view delegate
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gifCell", for: indexPath) as! GifCell
         
@@ -98,9 +100,30 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             }
          }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if viewModel.gifs.isEmpty {
+            return
+        }
+        
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        
+        controller.display(from: viewModel.gifs[indexPath.row].images.original)
 
+        self.present(controller, animated: true)
+    }
 }
 
+//MARK: Collection view layout
+extension MainViewController: PinterestLayoutDelegate {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
+            return CGFloat(viewModel.gifs[indexPath.item].images.fixedWidth.height)
+    }
+}
+
+//MARK: Search bar
 extension MainViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         self.searchBar.showsCancelButton = true
@@ -111,7 +134,6 @@ extension MainViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
         searchBar.text = ""
         viewModel.searchQuery.onNext("")
-        viewModel.resetGifList()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -122,12 +144,3 @@ extension MainViewController: UISearchBarDelegate {
         viewModel.searchQuery.onNext(searchText)
     }
 }
-
-extension MainViewController: PinterestLayoutDelegate {
-  func collectionView(
-      _ collectionView: UICollectionView,
-      heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
-          return CGFloat(viewModel.gifs[indexPath.item].images.fixedWidth.height)
-  }
-}
-

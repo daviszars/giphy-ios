@@ -34,6 +34,7 @@
 		3E18A1702AB6504200115110 /* GifCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E18A16E2AB6504200115110 /* GifCell.xib */; };
 		3E18A1792AB79B1100115110 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 3E18A1782AB79B1100115110 /* Nuke */; };
 		3E18A17B2AB79B1100115110 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3E18A17A2AB79B1100115110 /* NukeUI */; };
+		3E18A17F2AB84E2E00115110 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E18A17E2AB84E2E00115110 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		3E18A1682AB6098400115110 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		3E18A16D2AB6504200115110 /* GifCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCell.swift; sourceTree = "<group>"; };
 		3E18A16E2AB6504200115110 /* GifCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GifCell.xib; sourceTree = "<group>"; };
+		3E18A17E2AB84E2E00115110 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				3E18A15B2AB3E3FB00115110 /* main */,
+				3E18A17D2AB84E0400115110 /* details */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -246,6 +249,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E18A17D2AB84E0400115110 /* details */ = {
+			isa = PBXGroup;
+			children = (
+				3E18A17E2AB84E2E00115110 /* DetailsViewController.swift */,
+			);
+			path = details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +415,7 @@
 				3E18A10E2AB21CF400115110 /* SceneDelegate.swift in Sources */,
 				3E18A14D2AB26B0200115110 /* RxExtensions.swift in Sources */,
 				3E18A1562AB3C5D100115110 /* Pagination.swift in Sources */,
+				3E18A17F2AB84E2E00115110 /* DetailsViewController.swift in Sources */,
 				3E18A1692AB6098400115110 /* PinterestLayout.swift in Sources */,
 				3E18A1582AB3C6E800115110 /* Images.swift in Sources */,
 				3E18A15A2AB3C91F00115110 /* GifDetails.swift in Sources */,

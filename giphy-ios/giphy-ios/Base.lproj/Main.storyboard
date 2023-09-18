@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUU-AZ-ffT">
-                                <rect key="frame" x="0.0" y="180" width="393" height="638"/>
+                                <rect key="frame" x="0.0" y="176" width="393" height="642"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewLayout key="collectionViewLayout" id="dRQ-4i-ygc" customClass="PinterestLayout" customModule="giphy_ios" customModuleProvider="target"/>
                                 <cells/>
@@ -28,13 +28,13 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faI-We-6EW">
-                                <rect key="frame" x="19.999999999999993" y="79" width="123.33333333333331" height="37"/>
+                                <rect key="frame" x="19.999999999999993" y="75" width="123.33333333333331" height="37"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search GIPHY" translatesAutoresizingMaskIntoConstraints="NO" id="B4c-rf-dHW">
-                                <rect key="frame" x="0.0" y="124" width="393" height="56"/>
+                                <rect key="frame" x="0.0" y="116" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="fZ0-Ox-tsS"/>
@@ -44,14 +44,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pUU-AZ-ffT" firstAttribute="top" secondItem="B4c-rf-dHW" secondAttribute="bottom" id="CZl-m4-iaz"/>
+                            <constraint firstItem="pUU-AZ-ffT" firstAttribute="top" secondItem="B4c-rf-dHW" secondAttribute="bottom" constant="4" id="CZl-m4-iaz"/>
                             <constraint firstItem="B4c-rf-dHW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XNg-Ig-PZq"/>
-                            <constraint firstItem="faI-We-6EW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="esq-9Q-N87"/>
+                            <constraint firstItem="faI-We-6EW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="esq-9Q-N87"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="faI-We-6EW" secondAttribute="trailing" constant="8" id="kFV-qA-tCn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pUU-AZ-ffT" secondAttribute="bottom" id="mJu-p7-BLD"/>
                             <constraint firstItem="pUU-AZ-ffT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nOJ-wR-RZi"/>
                             <constraint firstItem="faI-We-6EW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="p3j-6y-Kke"/>
-                            <constraint firstItem="B4c-rf-dHW" firstAttribute="top" secondItem="faI-We-6EW" secondAttribute="bottom" constant="8" id="qoW-nq-Mkp"/>
+                            <constraint firstItem="B4c-rf-dHW" firstAttribute="top" secondItem="faI-We-6EW" secondAttribute="bottom" constant="4" id="qoW-nq-Mkp"/>
                             <constraint firstItem="B4c-rf-dHW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xfD-Ei-uqW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pUU-AZ-ffT" secondAttribute="trailing" id="xwW-IN-IKi"/>
                         </constraints>
@@ -65,6 +65,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138.1679389312977" y="-2.1126760563380285"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="AUL-Os-GZM">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jio-NL-yEA" customClass="DetailsViewController" customModule="giphy_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NFI-SN-1OP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="z9R-kf-KqE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nP9-DI-Hed"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ony-XC-4D6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="909" y="-2"/>
         </scene>
     </scenes>
     <resources>
