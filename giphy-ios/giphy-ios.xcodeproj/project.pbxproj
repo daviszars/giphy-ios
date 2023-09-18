@@ -149,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				3E18A1482AB26A8100115110 /* networking */,
-				3E18A14B2AB26A9900115110 /* models */,
 				3E18A14A2AB26A9600115110 /* views */,
 				3E18A1492AB26A9300115110 /* repositories */,
 				3E18A1472AB26A7E00115110 /* extensions */,
@@ -214,13 +213,6 @@
 				3E18A17D2AB84E0400115110 /* details */,
 			);
 			path = views;
-			sourceTree = "<group>";
-		};
-		3E18A14B2AB26A9900115110 /* models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = models;
 			sourceTree = "<group>";
 		};
 		3E18A1502AB3C42E00115110 /* dto */ = {
